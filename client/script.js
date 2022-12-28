@@ -79,14 +79,14 @@ const handleSubmit = async (e) => {
 
     // to focus scroll to the bottom 
     chatContainer.scrollTop = chatContainer.scrollHeight;
-    
+
     // specific message div 
     const messageDiv = document.getElementById(uniqueId)
 
     // messageDiv.innerHTML = "..."
     loader(messageDiv)
 
-    const response = await fetch('http://localhost:5001', {
+    const response = await fetch('https://openai-codex-6d7d.onrender.com', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
